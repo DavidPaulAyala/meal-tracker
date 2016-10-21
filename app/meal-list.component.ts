@@ -11,10 +11,10 @@ import { Meal } from './meal.model';
     </select>
 
     <div *ngFor="let currentMeal of childMealList | calorie:selectedCalories" class="meal">
-      <h4>{{ currentMeal.name }}</h4>
-      <p>Details: {{ currentMeal.details }}</p>
-      <p>Calories: {{ currentMeal.calories }}</p>
-      <button (click)="editButtonHasBeenClicked(currentMeal)">Edit Meal</button>
+      <h1>{{ currentMeal.name }}</h1>
+      <h4>Details: {{ currentMeal.details }}</h4>
+      <h4>Calories: {{ currentMeal.calories }}</h4>
+      <button class="button" (click)="editButtonHasBeenClicked(currentMeal)">Edit Meal</button>
     </div>
   `
 })

@@ -4,6 +4,9 @@ var gulp = require('gulp');
 // used for concatenating/minifying bower files and other js/css
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+// sass
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 // used for pulling in bower files.
 var lib = require('bower-files')({
   "overrides":{
@@ -106,6 +109,7 @@ gulp.task('htmlBuild', function(){
 gulp.task('cssBuild', ['sassBuild'], function(){
   browserSync.reload();
 });
+
 
 gulp.task('tsBuild', ['ts'], function(){
   browserSync.reload();

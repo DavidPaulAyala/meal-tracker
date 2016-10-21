@@ -6,7 +6,12 @@ import { Meal } from './meal.model'
   template: `
   <div class="container">
     <div class="well">
-      <h1>Meal Tracker</h1>
+      <div class="jumbotron">
+        <h1>Meal Tracker</h1>
+      </div>
+      <new-meal
+        (newMealSender)="addMeal($event)"
+      ></new-meal>
       <meal-list
         [childMealList]="masterMealList"
         (clickSender)="showMealDetails($event)"
@@ -15,9 +20,6 @@ import { Meal } from './meal.model'
         [childSelectedMeal]="selectedMeal"
         (doneClickedSender)="finishedEditing()"
       ></edit-meal>
-      <new-meal
-        (newMealSender)="addMeal($event)"
-      ></new-meal>
     </div>
   </div>
   `

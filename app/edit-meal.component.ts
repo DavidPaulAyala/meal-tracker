@@ -4,7 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'edit-meal',
   template: `
-    <div *ngIf="childSelectedMeal">
+    <div class="meal" *ngIf="childSelectedMeal">
       <h1>Edit Meal</h1>
       <div>
         <label>Enter the name of the Meal:</label>
@@ -17,7 +17,7 @@ import { Meal } from './meal.model';
       <div>
         <label>Enter the calories of the Meal:</label>
         <input [(ngModel)]="childSelectedMeal.calories">
-        <button (click)="doneClicked()">Done</button>
+        <button class="button" (click)="doneClicked()">Done</button>
       </div>
     </div>
   `
